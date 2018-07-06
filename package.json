@@ -1,0 +1,44 @@
+{
+  "name": "value-mask",
+  "version": "1.0.0",
+  "description": "A wee javascript input mask.",
+  "main": "src/vanilla-masker.js",
+  "scripts": {
+    "build": "babel mask.js < src/mask.js",
+    "test": "jest",
+    "dev": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vanilla-masker/vanilla-masker.git"
+  },
+  "keywords": [
+    "mask input",
+    "javascript",
+    "lightweight",
+    "cross-browser",
+    "cross-device"
+  ],
+  "author": [
+    "Cory Brown <oh.wise.man@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanilla-masker/vanilla-masker/issues"
+  },
+  "homepage": "https://vanilla-masker.github.io/vanilla-masker/",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-standard": "^1.0.2",
+    "jest": "^23.3.0"
+  }
+}
