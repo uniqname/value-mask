@@ -2,15 +2,19 @@
   "name": "value-mask",
   "version": "1.0.0",
   "description": "A wee javascript input mask.",
-  "main": "src/vanilla-masker.js",
+  "main": "lib/mask.cjs.js",
+  "module": "lib/mask.js",
+  "browser": "lib/mask.min.js",
   "scripts": {
-    "build": "babel mask.js < src/mask.js",
+    "build": "npm test && npm run build:cjs && npm run build:browser",
+    "build:cjs": "babel lib/mask.js --out-file lib/mask.cjs.js",
+    "build:browser": "node -r babel-register ./scripts/build-for-browser.js | babel --out-file lib/mask.min.js --presets minify",
     "test": "jest",
     "dev": "jest --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/vanilla-masker/vanilla-masker.git"
+    "url": "git@github.com:uniqname/value-mask.git"
   },
   "keywords": [
     "mask input",
@@ -24,13 +28,17 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vanilla-masker/vanilla-masker/issues"
+    "url": "https://github.com/uniqname/value-mask/issues"
   },
-  "homepage": "https://vanilla-masker.github.io/vanilla-masker/",
+  "homepage": "https://github.com/uniqname/value-mask/",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "babel-register": "^6.26.0",
+    "babel-traverse": "^6.26.0",
+    "babel-types": "^6.26.0",
     "eslint": "^5.0.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
